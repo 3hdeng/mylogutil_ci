@@ -1,0 +1,16 @@
+language: csharp
+
+mono: none
+
+dotnet:2.1.402
+
+install:
+ - dotnet restore
+ - dotnet add package xunit
+ - dotnet add xunit.runner.visualstudio  
+
+script:
+ - dotnet build
+ - dotnet test mylogutil.tests/mylogutil.tests.csproj
+
+
