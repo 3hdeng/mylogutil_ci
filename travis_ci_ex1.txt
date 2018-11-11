@@ -1,0 +1,29 @@
+//=== https://medium.com/@pjbgf/configuring-ci-for-net-core-using-travis-ci-and-xunit-cc0f809df4fb
+
+2017.04
+Configuring CI for .Net Core using Travis CI and Xunit
+
+to configure your .travis.yml file. For a basic CI pipeline, running your .Net Core tests on a linux box you really don’t need much:
+
+language: csharp
+dist: trusty
+mono: none
+dotnet: 1.0.1
+install:
+- dotnet restore
+script:
+- dotnet build
+- dotnet test Core.Shogi.Tests/Core.Shogi.Tests.csproj
+
+
+ all the paths are relative to the root of your repository, therefore save your .travis.yml there are well.
+Also that I have not provided a solution name. That alongside having mono not to be installed made the builds be
+executed twice as fast as they first were.
+
+
+??? logo ?
+badges, you can simply add one onto your README.md using the image path below:
+
+https://travis-ci.org/GITUSER/REPO_NAME.svg?branch=BRANCH
+
+

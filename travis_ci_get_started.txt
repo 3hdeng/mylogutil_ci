@@ -1,0 +1,26 @@
+//===   https://docs.travis-ci.com/user/tutorial/
+
+To get started with Travis CI #
+Go to Travis-ci.com and Sign up with GitHub.
+
+Accept the Authorization of Travis CI. You’ll be redirected to GitHub.
+
+Click the green Activate button, and select the repositories you want to use with Travis CI.
+
+Add a .travis.yml file to your repository to tell Travis CI what to do.
+
+ 
+The following example specifies a Ruby project that should be built with Ruby 2.2 and the latest versions of JRuby.
+
+language: ruby
+rvm:
+ - 2.2
+ - jruby
+YAML
+The defaults for Ruby projects are bundle install to install dependencies, and rake to build the project.
+
+Add the .travis.yml file to git, commit and push, to trigger a Travis CI build:
+
+Travis only runs builds on the commits you push after you’ve added a .travis.yml file.
+
+Check the build status page to see if your build passes or fails, according to the return status of the build command by visiting the  Travis CI and selecting your repository.
