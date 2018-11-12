@@ -1,0 +1,17 @@
+{
+  "os": "linux",
+  "dist": "trusty",
+  "mono": "none",
+  "group": "stable",
+  "dotnet": "2.1.402",
+  "script": [
+    "dotnet build",
+    "dotnet test mylogutil.tests/mylogutil.tests.csproj"
+  ],
+  "install": [
+    "dotnet restore",
+    "dotnet add package xunit",
+    "dotnet add package xunit.runner.visualstudio"
+  ],
+  "language": "csharp"
+}

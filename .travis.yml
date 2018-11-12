@@ -6,8 +6,6 @@ dotnet: 2.1.402
 
 install:
  - dotnet restore
- - dotnet add package xunit
- - dotnet add package xunit.runner.visualstudio  
 
 script:
  - dotnet build
